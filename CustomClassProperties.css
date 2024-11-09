@@ -1,0 +1,196 @@
+    /* OPTIMIZE: color palette */
+    
+    /* Primary green */
+    .primary-light-green{
+        color: rgb(20, 159, 90);
+    }
+    .primary-mid-green{
+        color: rgb(19, 113, 66);
+    }
+    .primary-dark-green{
+        color: rgb(24, 71, 37);
+    }
+
+    /* Secondary green */
+    .secondary-light-green{
+        color: rgb(4, 135, 70);
+    }
+    .secondary-mid-green{
+        color: rgb(12, 66, 39);
+    }
+    .secondary-dark-green{
+        color: rgb(9, 32, 21);
+    }
+
+    /* tertiary color */
+    .tertiary-c-white{
+        color: rgb(255, 255, 255);
+    }
+    .tertiary-c-silver{
+        color: rgb(233, 233, 233);
+    }
+    .tertiary-c-dgrey{
+        color: rgb(138, 135, 135);
+    }
+    .tertiary-c-hblack{
+        color: rgb(22, 19, 19);
+    }
+    .tertiary-c-black{
+        color: rgb(0, 0, 0);
+    }
+    .tertiary-c-red{
+        color: rgb(190, 30, 30);
+    }
+    .tertiary-c-l-red{
+        color: rgb(212, 41, 41);
+    }
+    
+
+
+    
+    
+    
+    /* OPTIMIZE: font family and text properties */
+
+    /* 
+        Inter font family ( Default )
+    */
+    
+
+    /* Mitr font family */
+    @font-face {
+        font-family: "Mitr-Bold";
+        src: url(/Assets/Mitr-Bold.ttf);
+    }
+    @font-face {
+        font-family: "Mitr-Extralight";
+        src: url(/Assets/Mitr-ExtraLight.ttf);
+    }
+    @font-face {
+        font-family: "Mitr-Light";
+        src: url(/Assets/Mitr-Light.ttf);
+    }
+    @font-face {
+        font-family: "Mitr-Medium";
+        src: url(/Assets/Mitr-Medium.ttf);
+    }
+    @font-face {
+        font-family: "Mitr-Regular";
+        src: url(/Assets/Mitr-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Mitr-SemiBold";
+        src: url(/Assets/Mitr-SemiBold.ttf);
+    }
+
+
+
+    p{
+        font-size: 0.7rem;
+        font-family: Inter;
+        font-weight: 500;
+        color: black;
+    }
+    span{
+        font-size: 0.7rem;
+        font-family: Inter;
+        font-weight: 500;
+        color: black;
+    }
+
+
+    /* OPTIMIZE: button properties */
+
+    button{
+        cursor: pointer;
+        outline-style: none;
+        border-style: none;
+        border: 1px solid rgb(138, 135, 135);
+        height: 32px;
+    }
+    /* button:hover{
+        transition: 0.3s ease-in-out;
+        border: 1px solid rgb(138, 135, 135);
+        background-color: rgb(138, 135, 135);
+    } */
+
+
+    .btn-submit{
+        border: 1px solid rgb(20, 159, 90);
+        background-color: rgb(20, 159, 90); 
+    }
+    .btn-submit:hover{
+        transition: 0.3s ease-in-out;
+
+        border: 1px solid rgb(4, 135, 70);
+        background-color: rgb(4, 135, 70);
+    }
+    .btn-submit span{
+        color: rgb(255, 255, 255);
+    }
+
+
+
+    .btn-cancel{
+        border: 1px solid rgb(190, 30, 30);
+        background-color: inherit;
+    }
+    .btn-cancel:hover{
+        transition: 0.3s ease-in-out;
+
+        border: 1px solid rgb(190, 30, 30);
+        background-color: rgb(190, 30, 30);
+    }
+    .btn-cancel span{
+        color: rgb(190, 30, 30);;
+    }
+    .btn-cancel:hover span{
+        color: rgb(255, 255, 255);
+    }
+
+
+    /* OPTIMIZE: image properties */
+    img{
+        width: 16px;
+        height: 16px;
+    }
+
+
+
+    /* OPTIMIZE: label and input properties  */
+
+    label{
+        font-size: 0.7rem;
+        font-family: Inter;
+        font-weight: 500;
+        color: black;
+    }
+    input{
+        outline-style: none;
+        border-style: none;
+        border: 1px solid rgb(160, 160, 160);
+        width: 164px;
+        height: 24px;
+    }
+    input[type="password"]::-ms-reveal, input[type="password"]::-webkit-textfield-decoration-container{
+        display: none;
+    }
+
+
+
+    /* body */
+    body{
+        background-color:  rgb(20, 159, 90);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+
+
+
+
+    ul{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    

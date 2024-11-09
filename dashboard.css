@@ -1,0 +1,2136 @@
+body{
+    background-color: rgb(24, 71, 37);
+}
+
+
+
+ /* OPTIMIZE : 360px */
+@media (min-width: 360px){ 
+    .row{
+        height: 100vh;
+   }
+
+    .Desktop-SidePanel{
+        display: none;
+    }
+
+
+
+
+    
+    /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+               display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+               align-self: flex-end;
+
+               font-size: 0.6rem;
+               color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+               justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+               align-self: center;
+
+               width: 18px;
+               height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: auto;
+
+          overflow: hidden;
+     }
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+     /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+     .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar{
+          background-color: rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 32px;
+     }
+
+
+     /* OPTIMIZE: content boxes */
+
+     /* CONTENT BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1{
+          width: 100%;
+          height: auto;
+          padding: 20px;
+
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 45px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card{
+          background-color: rgb(19, 113, 66);
+          border-radius: 12px;
+          width: 245px;
+          height: 150px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > img{
+          align-self: center;
+
+          width: 20px;
+          height: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body{
+          height: 85px;
+
+          display: flex;
+          justify-content: start;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body > span{
+          margin-left: 32px;
+          margin-top: 42px;
+          
+          font-size: 1.5rem;
+          color: white;
+     }
+
+
+
+
+
+     /* CONTENT BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2{
+          width: 100%;
+          height: 100vh;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     
+     /* SCHEDULE CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Space{
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 90%;
+          height: 100%;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+     /* BACKUP CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Space{
+          align-self: center;
+          
+          
+          width: 100%;
+          height: 32px;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          border-radius: 12px;
+          width: 75%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box{
+          width: 50%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          width: 28px;
+          height: 28px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button:hover{
+          transition: 0.3s ease-in-out;
+          
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+
+     /* OPTIMIZE: CLASSLIST */
+
+     /* TODO: SCHEDULE */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box{
+          width: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box > span{
+          align-self: center;
+     }
+
+
+
+     /*TODO:  BACKUP */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box{
+          width: 50%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(1) > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(2) > span{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button > img{
+          align-self: center;
+
+          width: 16px;
+          height: 16px;
+     }
+} 
+
+
+ /* OPTIMIZE : 375px */
+@media (min-width: 375){ 
+     .row{
+         height: 100vh;
+    }
+ 
+     .Desktop-SidePanel{
+         display: none;
+     }
+
+
+     
+     /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+               display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+               align-self: flex-end;
+
+               font-size: 0.6rem;
+               color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+               align-self: center;
+
+               border: 1px solid rgb(24, 71, 37);
+               background-color: rgb(24, 71, 37);
+               width: 32px;
+               height: 32px;
+
+               display: flex;
+               justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+               align-self: center;
+
+               width: 18px;
+               height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+     .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar{
+          background-color: rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 32px;
+     }
+
+
+     /* OPTIMIZE: content boxes */
+
+     /* CONTENT BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1{
+          width: 100%;
+          height: auto;
+          padding: 20px;
+
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 45px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card{
+          background-color: rgb(19, 113, 66);
+          border-radius: 12px;
+          width: 245px;
+          height: 150px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > img{
+          align-self: center;
+
+          width: 20px;
+          height: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body{
+          height: 85px;
+
+          display: flex;
+          justify-content: start;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body > span{
+          margin-left: 32px;
+          margin-top: 42px;
+          
+          font-size: 1.5rem;
+          color: white;
+     }
+
+
+
+
+
+     /* CONTENT BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2{
+          width: 100%;
+          height: 100vh;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     
+     /* SCHEDULE CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Space{
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 90%;
+          height: 100%;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+     /* BACKUP CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Space{
+          align-self: center;
+          
+          
+          width: 100%;
+          height: 32px;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          border-radius: 12px;
+          width: 75%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box{
+          width: 50%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          width: 28px;
+          height: 28px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button:hover{
+          transition: 0.3s ease-in-out;
+          
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+
+     /* OPTIMIZE: CLASSLIST */
+
+     /* TODO: SCHEDULE */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box{
+          width: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box > span{
+          align-self: center;
+     }
+
+
+
+     /*TODO:  BACKUP */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box{
+          width: 50%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(1) > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(2) > span{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button > img{
+          align-self: center;
+
+          width: 16px;
+          height: 16px;
+     }
+     
+
+
+} 
+
+
+ /* OPTIMIZE : 492px */
+@media (min-width: 492px){ 
+   /* BASE STYLE */ 
+
+     .row{
+          height: 100vh;
+     }
+
+     /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+          display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+          align-self: flex-end;
+
+          font-size: 0.6rem;
+          color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+     .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar{
+          background-color: rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 32px;
+     }
+
+
+     /* OPTIMIZE: content boxes */
+
+     /* CONTENT BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1{
+          width: 100%;
+          height: auto;
+          padding: 20px;
+
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 45px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card{
+          background-color: rgb(19, 113, 66);
+          border-radius: 12px;
+          width: 245px;
+          height: 150px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > img{
+          align-self: center;
+
+          width: 20px;
+          height: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body{
+          height: 85px;
+
+          display: flex;
+          justify-content: start;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card > .Card-Body > span{
+          margin-left: 32px;
+          margin-top: 42px;
+          
+          font-size: 1.5rem;
+          color: white;
+     }
+
+
+
+
+
+     /* CONTENT BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2{
+          width: 100%;
+          height: 100vh;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     
+     /* SCHEDULE CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Space{
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 90%;
+          height: 100%;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Header > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+     /* BACKUP CONTAINER */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Space{
+          align-self: center;
+          
+          
+          width: 100%;
+          height: 32px;
+
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card{
+          align-self: center;
+
+          background-color:  rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          border-radius: 12px;
+          width: 75%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 50px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box{
+          width: 50%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          width: 28px;
+          height: 28px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button:hover{
+          transition: 0.3s ease-in-out;
+          
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Header > .Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body{
+          /* border: 1px solid red; */
+          width: 100%;
+          height: 100%;
+
+          overflow-y: auto;
+     }
+
+
+
+
+     /* OPTIMIZE: CLASSLIST */
+
+     /* TODO: SCHEDULE */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box{
+          width: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card > .Card-Body .Parent-Container-For-Schedule > .new-list-for-schedule > .Info-Box > span{
+          align-self: center;
+     }
+
+
+     /*TODO:  BACKUP */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup{
+          width: 100%;
+          height: auto;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 45px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box{
+          width: 50%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(1) > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(2) > span{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Backup-Container > .Card > .Card-Body .Parent-Container-For-Backup > .new-list-for-backup > .Info-box:nth-child(3) > button > img{
+          align-self: center;
+
+          width: 16px;
+          height: 16px;
+     }
+     
+
+
+} 
+
+
+
+ /* OPTIMIZE : 500px */
+@media (min-width: 500px){ 
+
+
+     /* TODO: Tablet Navigation */
+     .Workspace > .Workspace-Area > .Tablet-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          width: 250px;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          
+          animation: SlideRight 1s ease-in-out;
+     }
+     @keyframes SlideRight {
+          from{
+               width: 0px;
+          }
+     }
+
+
+     
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+} 
+
+
+
+ /* OPTIMIZE : 768px */
+@media (min-width: 768px){ 
+
+     .Workspace > .Header > .col:nth-child(1){
+          margin-left: 42px;
+
+          justify-content: start;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          display: flex;
+     }
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-4{
+
+          height: 60vh;
+
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-4 > .Box:nth-child(1){
+          width: 50%;
+     }
+     
+
+} 
+
+
+
+ /* OPTIMIZE : 992px */
+@media (min-width: 992px){ 
+
+     /* TODO: Desktop Navigation */
+     .Desktop-SidePanel{
+          background-color: rgb(19, 113, 66);
+          width: 250px;
+          margin: 0px;
+          padding: 0px;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          animation: SlideRight 1s ease-in-out;  
+     }
+     @keyframes SlideRight {
+          from{
+               width: 0px;
+          }
+     }
+
+
+     .Desktop-SidePanel > .Header{
+          background-color: rgb(19, 113, 66);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Desktop-SidePanel > .Header > .Box{
+          align-self: center;
+
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+     }
+     .Desktop-SidePanel > .Header > .Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          margin-left: 42px;
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Desktop-SidePanel > .Header > .Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+     .Desktop-SidePanel > .Header > .Box > span{
+          align-self: center;
+
+          margin-left: 24px;
+          color: rgb(255, 255, 255);
+     }
+
+
+
+     .Desktop-SidePanel > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          overflow: hidden;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+     }
+
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+    
+
+
+
+     /* TODO: Workspace */
+     .Workspace > .Header > .col:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(2){
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          margin-left: 34px;
+          width: 300px;
+
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+          align-self: center;
+
+          margin-left: 14px;
+          color: rgb(255, 255, 255);
+
+          display: flex;
+     }
+
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-2{
+          justify-content: start;
+     }
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-2 > .Card{
+          margin-left: 75px;
+     }
+
+
+
+     /* TODO: CONTENT */
+
+     /* CONTENT BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1{
+          justify-content: start;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card:nth-child(1){
+          margin-left: 32px;
+     }
+
+
+     /* SCHEDULE */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card{
+          margin-left: 42px;
+     }
+
+} 
+
+
+
+ /* OPTIMIZE : 1300px */
+@media (min-width: 1300px){ 
+     .Desktop-SidePanel{
+          width: 250px;
+
+          display: flex;
+     }
+
+     
+     .Workspace > .Header > .col:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+               display: none;
+     }
+
+     .Workspace > .Header > .col:nth-child(2){
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          margin-left: 34px;
+          width: 300px;
+
+          justify-content: start;
+     }
+
+
+     /* TODO: CONTENT */
+
+     /* CONTENT BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1{
+          justify-content: start;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-1 > .Card:nth-child(1){
+          margin-left: 32px;
+     }
+
+
+     /* SCHEDULE */
+     .Workspace > .Workspace-Area > .Workspace-Body > .Content-Box-2 > .Schedule-Container > .Card{
+          margin-left: 42px;
+     }
+
+}
+

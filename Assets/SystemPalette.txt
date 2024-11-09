@@ -1,0 +1,34 @@
+(LIBRARY MANAGEMENT SYSTEM) PALETTE
+
+PRIMARY: 
+  light green:   #149F5A  / rgb(20, 159, 90)
+  mid green  :   #137142  / rgb(19, 113, 66)
+  dark green :   #184725  / rgb(24, 71, 37)
+
+SECONDARY:
+  light green:   #048746 / rgb(4, 135, 70)
+  mid green  :   #0C4227 / rgb(12, 66, 39)
+  dark green :   #092015 / rgb(9, 32, 21)
+
+THIRD:
+  white      :   #FFFFFF  / rgb(255, 255, 255)
+  silver     :   #E9E9E9  / rgb(233, 233, 233)
+  grey       :   #B5B5B5  / rgb(233, 233, 233)
+  dark grey  :   #8A8787  /  rgb(138, 135, 135)
+  hollow black:  #161313  / rgb(22, 19, 19)
+  black      :   #000000  / rgb(0, 0, 0)
+  red        :	 #BE1E1E  / rgb(190, 30, 30)
+
+------------------------------------
+
+Fonts Family: Inter, Mtir
+Font Sizes:
+  8px = 0.5rem
+  12px = 0.75 rem
+  16px = 1 rem
+  18px = 1.125 rem
+  22px = 1.255 rem
+  24px = 1.375 rem
+  32px = 2 rem
+  42px = 2.625 rem
+  64px = 4 rem

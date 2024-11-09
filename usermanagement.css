@@ -1,0 +1,3640 @@
+body{
+    background-color: rgb(24, 71, 37);
+}
+
+
+ /* OPTIMIZE : 100px */
+@media (min-width: 100px){ 
+    .row{
+        height: 100vh;
+   }
+
+    .Desktop-SidePanel{
+        display: none;
+    }
+
+
+
+
+    
+    /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+               display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+               align-self: flex-end;
+
+               font-size: 0.6rem;
+               color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+               justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+               align-self: center;
+
+               width: 18px;
+               height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: auto;
+
+          overflow: hidden;
+     }
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     /* .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     } */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+      /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+     .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow: hidden;
+    }
+    .Workspace > .Workspace-Area > .Workspace-Body > .Inner-Box{
+        overflow-y: auto;
+    }
+
+
+
+     /* CONTENT-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-1{
+          height: 5%;
+
+          display: flex;
+     }
+
+
+     /* CONTENT-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2{
+          height: 95%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card{
+          align-self: center;
+
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 80%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 65px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          border-radius: 6px;
+          margin-left: 32px;
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box{
+          width: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .col:nth-child(2) > input{
+          align-self: center;
+          
+          border: none;
+          width: 100%;
+          height: 20px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          margin-left: 18px;
+          width: 132px;
+          padding: 5px;
+
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button:hover{
+          transition: 0.3s ease-in-out;
+
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body{
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box{
+          width: 100%;
+          height: 90%;
+
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+     }
+
+
+     /* OPTIMIZE: CLASSLIST */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users{
+          align-self: center;
+          
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: auto;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box{
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(1) > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          position: absolute;
+
+          border: 1px solid black;
+          width: 100%;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container{
+     
+          width: 100%;
+          height: 50%;
+     }
+
+
+     /* CONTAINER-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1){
+          height: 40%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box{
+          align-self: center;
+          
+     
+          width: 175px;
+          height: 200px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box{
+     
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          gap: 2px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box{
+          width: 100%;
+          height: 160px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box > img{
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box{
+          width: 100%;
+          height: 28px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background{
+          position: relative;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 28px;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input{
+          position: absolute;
+
+          border: none;
+          font-size: 0.8rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input::-webkit-file-upload-button{
+          width: 28px;
+
+          opacity: 0%;
+     }
+
+
+     /* CONTAINER-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2){
+          width: 100%;
+          height: 60%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box{
+          align-self: center;
+          
+     
+          width: 32px;
+          height: 32px;
+     }
+
+
+     /* BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1{
+          width: 350px;
+          height: 245px;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box{
+     
+          width: 100%;
+          height: 50%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box{
+     
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box > input{
+          height: 30px;
+
+          font-size: 0.7rem;
+     }
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* P-BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+     /* P-BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+     
+     
+
+     /* BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2{
+          width: 240px;
+          height: 35px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2 > button{
+          align-self: center;
+          
+          border-radius: 4px;
+          width: 95px;
+     }
+
+
+
+
+
+
+
+     /* TODO: MESSAGE BOX */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box{
+          position: absolute;
+
+          border: 1px solid black;
+          background-color: rgb(255, 255, 255);
+          width: 400px;
+          height: 300px;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box{
+          align-self: center;
+          
+          width: 350px;
+          height: 250px;
+     }
+
+     /* COL-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1){
+          height: 80%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1) > span{
+          align-self: center;
+     }
+
+     /* COL-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2){
+          height: 20%;
+
+          gap: 8%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button{
+          align-self: center;
+
+          width: 120px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2){
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2) > span{
+          color: white;
+     }
+
+} 
+
+
+ /* OPTIMIZE : 360px */
+@media (min-width: 360px){ 
+    .row{
+        height: 100vh;
+   }
+
+    .Desktop-SidePanel{
+        display: none;
+    }
+
+
+
+
+    
+    /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+               display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+               align-self: flex-end;
+
+               font-size: 0.6rem;
+               color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+               justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+               align-self: center;
+
+               width: 18px;
+               height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: auto;
+
+          overflow: hidden;
+     }
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     /* .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     } */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+      /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+     .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow: hidden;
+    }
+    .Workspace > .Workspace-Area > .Workspace-Body > .Inner-Box{
+        overflow-y: auto;
+    }
+
+
+
+     /* CONTENT-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-1{
+          height: 5%;
+
+          display: flex;
+     }
+
+
+     /* CONTENT-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2{
+          height: 95%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card{
+          align-self: center;
+
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 80%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 65px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          border-radius: 6px;
+          margin-left: 32px;
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box{
+          width: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .col:nth-child(2) > input{
+          align-self: center;
+          
+          border: none;
+          width: 100%;
+          height: 20px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          margin-left: 18px;
+          width: 132px;
+          padding: 5px;
+
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button:hover{
+          transition: 0.3s ease-in-out;
+
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body{
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box{
+          width: 100%;
+          height: 90%;
+
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+     }
+
+
+     /* OPTIMIZE: CLASSLIST */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users{
+          align-self: center;
+          
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: auto;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box{
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(1) > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          position: absolute;
+
+          border: 1px solid black;
+          width: 100%;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container{
+     
+          width: 100%;
+          height: 50%;
+     }
+
+
+     /* CONTAINER-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1){
+          height: 40%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box{
+          align-self: center;
+          
+     
+          width: 175px;
+          height: 200px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box{
+     
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          gap: 2px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box{
+          width: 100%;
+          height: 160px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box > img{
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box{
+          width: 100%;
+          height: 28px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background{
+          position: relative;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 28px;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input{
+          position: absolute;
+
+          border: none;
+          font-size: 0.8rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input::-webkit-file-upload-button{
+          width: 28px;
+
+          opacity: 0%;
+     }
+
+
+     /* CONTAINER-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2){
+          width: 100%;
+          height: 60%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box{
+          align-self: center;
+          
+     
+          width: 32px;
+          height: 32px;
+     }
+
+
+     /* BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1{
+          width: 350px;
+          height: 245px;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box{
+     
+          width: 100%;
+          height: 50%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box{
+     
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box > input{
+          height: 30px;
+
+          font-size: 0.7rem;
+     }
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* P-BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+     /* P-BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+     
+     
+
+     /* BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2{
+          width: 240px;
+          height: 35px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2 > button{
+          align-self: center;
+          
+          border-radius: 4px;
+          width: 95px;
+     }
+
+
+
+
+
+
+
+     /* TODO: MESSAGE BOX */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box{
+          position: absolute;
+
+          border: 1px solid black;
+          background-color: rgb(255, 255, 255);
+          width: 400px;
+          height: 300px;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box{
+          align-self: center;
+          
+          width: 350px;
+          height: 250px;
+     }
+
+     /* COL-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1){
+          height: 80%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1) > span{
+          align-self: center;
+     }
+
+     /* COL-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2){
+          height: 20%;
+
+          gap: 8%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button{
+          align-self: center;
+
+          width: 120px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2){
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2) > span{
+          color: white;
+     }
+
+} 
+
+
+
+ /* OPTIMIZE : 375px */
+@media (min-width: 375){ 
+     .row{
+         height: 100vh;
+    }
+ 
+     .Desktop-SidePanel{
+         display: none;
+     }
+
+
+     
+     /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+               display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+               align-self: flex-end;
+
+               font-size: 0.6rem;
+               color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+               align-self: center;
+
+               border: 1px solid rgb(24, 71, 37);
+               background-color: rgb(24, 71, 37);
+               width: 32px;
+               height: 32px;
+
+               display: flex;
+               justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+               align-self: center;
+
+               width: 18px;
+               height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+    /* HIGHLIGHT CURRENT TAB */
+    /* .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+        border: 1px solid rgb(20, 159, 90);
+        background-color: rgb(19, 113, 66);
+     } */
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+        transition: 0.3s ease-in-out;
+        border: 1px solid rgb(20, 159, 90);
+        background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+       /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+    .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow: hidden;
+    }
+    .Workspace > .Workspace-Area > .Workspace-Body > .Inner-Box{
+        overflow-y: auto;
+    }
+
+
+
+     /* CONTENT-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-1{
+          height: 5%;
+
+          display: flex;
+     }
+
+
+     /* CONTENT-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2{
+          height: 95%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card{
+          align-self: center;
+
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 80%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 65px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          border-radius: 6px;
+          margin-left: 32px;
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box{
+          width: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .col:nth-child(2) > input{
+          align-self: center;
+          
+          border: none;
+          width: 100%;
+          height: 20px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          margin-left: 18px;
+          width: 132px;
+          padding: 5px;
+
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button:hover{
+          transition: 0.3s ease-in-out;
+
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body{
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box{
+          width: 100%;
+          height: 90%;
+
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+     }
+
+
+     /* OPTIMIZE: CLASSLIST */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users{
+          align-self: center;
+          
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: auto;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box{
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(1) > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          position: absolute;
+
+          border: 1px solid black;
+          width: 100%;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container{
+     
+          width: 100%;
+          height: 50%;
+     }
+
+
+     /* CONTAINER-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1){
+          height: 40%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box{
+          align-self: center;
+          
+     
+          width: 175px;
+          height: 200px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box{
+     
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          gap: 2px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box{
+          width: 100%;
+          height: 160px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box > img{
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box{
+          width: 100%;
+          height: 28px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background{
+          position: relative;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 28px;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input{
+          position: absolute;
+
+          border: none;
+          font-size: 0.8rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input::-webkit-file-upload-button{
+          width: 28px;
+
+          opacity: 0%;
+     }
+
+
+     /* CONTAINER-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2){
+          width: 100%;
+          height: 60%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box{
+          align-self: center;
+          
+     
+          width: 32px;
+          height: 32px;
+     }
+
+
+     /* BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1{
+          width: 350px;
+          height: 245px;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box{
+     
+          width: 100%;
+          height: 50%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box{
+     
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box > input{
+          height: 30px;
+
+          font-size: 0.7rem;
+     }
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* P-BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+     /* P-BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+     
+     
+
+     /* BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2{
+          width: 240px;
+          height: 35px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2 > button{
+          align-self: center;
+          
+          border-radius: 4px;
+          width: 95px;
+     }
+
+
+
+
+
+
+
+     /* TODO: MESSAGE BOX */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box{
+          position: absolute;
+
+          border: 1px solid black;
+          background-color: rgb(255, 255, 255);
+          width: 400px;
+          height: 300px;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box{
+          align-self: center;
+          
+          width: 350px;
+          height: 250px;
+     }
+
+     /* COL-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1){
+          height: 80%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1) > span{
+          align-self: center;
+     }
+
+     /* COL-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2){
+          height: 20%;
+
+          gap: 8%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button{
+          align-self: center;
+
+          width: 120px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2){
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2) > span{
+          color: white;
+     }
+
+} 
+
+
+ /* OPTIMIZE : 492px */
+@media (min-width: 492px){ 
+   /* BASE STYLE */ 
+
+     .row{
+          height: 100vh;
+     }
+
+     /* TODO: Workspace */
+     .Workspace{
+          margin: 0px;
+          padding: 0px;
+     }
+
+     .Workspace > .Header{
+          background-color: rgb(24, 71, 37);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Header > .col{ 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(1) > button{
+          align-self: center;
+
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1) img{
+          width: 24px;
+          height: 24px;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2) img{
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+          display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(3) > .Box{
+          align-self: center;
+
+          width: 40px;
+          height: 40px;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1){
+          width: 60%;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(1) > span{
+          align-self: flex-end;
+
+          font-size: 0.6rem;
+          color: white;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(24, 71, 37);
+          background-color: rgb(24, 71, 37);
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Header > .col:nth-child(3) > .Box:nth-child(2) > button img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+
+
+
+
+     .Workspace > .Workspace-Area{
+          height: 100vh;
+
+          overflow-y: auto;
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar{
+          background-color:  rgb(19, 113, 66);
+     }
+     .Workspace > .Workspace-Area::-webkit-scrollbar-thumb{
+          background-color: rgb(20, 159, 90);
+          border-radius: 16px;
+     }
+
+
+
+     /* TODO: Mobile Navigation */
+     .Workspace > .Workspace-Area > .Mobile-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+
+          animation: DropDown 1s ease-in-out;
+     }
+     @keyframes DropDown {
+          from{
+               height: 0%;
+          }
+          to{
+               height: 100%;
+          }
+     }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+    /* HIGHLIGHT CURRENT TAB */
+    /* .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+        border: 1px solid rgb(20, 159, 90);
+        background-color: rgb(19, 113, 66);
+    } */
+    .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+        transition: 0.3s ease-in-out;
+        border: 1px solid rgb(20, 159, 90);
+        background-color: rgb(20, 159, 90);
+    }
+
+
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Mobile-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+
+
+
+
+     /* TODO: Content */
+
+     /* OPTIMIZE: Workspace Body */
+    .Workspace > .Workspace-Area > .Workspace-Body{
+          overflow: hidden;
+    }
+    .Workspace > .Workspace-Area > .Workspace-Body > .Inner-Box{
+        overflow-y: auto;
+    }
+
+
+
+     /* CONTENT-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-1{
+          height: 5%;
+
+          display: flex;
+     }
+
+
+     /* CONTENT-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2{
+          height: 95%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card{
+          align-self: center;
+
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px 12px 0px 0px;
+          width: 80%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header{
+          background-color: rgb(20, 159, 90);
+          border-radius: 12px 12px 0px 0px;
+          height: 65px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          border-radius: 6px;
+          margin-left: 32px;
+          width: 100%;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box{
+          width: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .Img-Box > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(1) > .Search-Box > .col:nth-child(2) > input{
+          align-self: center;
+          
+          border: none;
+          width: 100%;
+          height: 20px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2); 
+          border-radius: 4px;
+          margin-left: 18px;
+          width: 132px;
+          padding: 5px;
+
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button:hover{
+          transition: 0.3s ease-in-out;
+
+          border: 1px solid rgb(4, 135, 70);
+          background-color: rgb(4, 135, 70);
+          box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 18px;
+          height: 18px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Header > .col:nth-child(2) > button > span{
+          align-self: center;
+
+          font-weight: 500;
+          font-size: 0.7rem;
+          color: white;
+     }
+     
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body{
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box{
+          width: 100%;
+          height: 90%;
+
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+     }
+
+
+     /* OPTIMIZE: CLASSLIST */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users{
+          align-self: center;
+          
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users{
+          box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: auto;
+          padding: 10px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box{
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(1) > img{
+          align-self: center;
+
+          width: 32px;
+          height: 32px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button{
+          align-self: center;
+
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(212, 41, 41);
+          background-color: rgb(212, 41, 41);
+
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5) > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          position: absolute;
+
+          border: 1px solid black;
+          width: 100%;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form{
+          align-self: center;
+          
+          background-color: rgb(255, 255, 255);
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container{
+     
+          width: 100%;
+          height: 50%;
+     }
+
+
+     /* CONTAINER-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1){
+          height: 40%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box{
+          align-self: center;
+          
+     
+          width: 175px;
+          height: 200px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box{
+     
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          gap: 2px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box{
+          width: 100%;
+          height: 160px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Image-Box > img{
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box{
+          width: 100%;
+          height: 28px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background{
+          position: relative;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 28px;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > .Icon-Background > img{
+          align-self: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input{
+          position: absolute;
+
+          border: none;
+          font-size: 0.8rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box > .Inner-Box > .Icon-Box > input::-webkit-file-upload-button{
+          width: 28px;
+
+          opacity: 0%;
+     }
+
+
+     /* CONTAINER-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2){
+          width: 100%;
+          height: 60%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box{
+          align-self: center;
+          
+     
+          width: 32px;
+          height: 32px;
+     }
+
+
+     /* BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1{
+          width: 350px;
+          height: 245px;
+
+          display: flex;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box{
+     
+          width: 100%;
+          height: 50%;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 15px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box{
+     
+          width: 100%;
+          height: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box > .Input-Box > input{
+          height: 30px;
+
+          font-size: 0.7rem;
+     }
+
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(2) > .Input-Box:nth-child(2) > .Verify-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+
+     /* P-BOX-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(1) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+
+
+     /* P-BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box{
+          border: 1px solid rgb(160, 160, 160);
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > input{
+          align-self: center;
+          
+          border: none;
+          width: 130px;
+          height: 29px;
+
+          font-size: 0.7rem;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button{
+          align-self: center;
+          
+          border: 1px solid rgb(189, 189, 189);
+          background-color:  rgb(255, 255, 255);
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1 > .Input-Field-Box:nth-child(4) > .Input-Box:nth-child(2) > .Password-Box > button > img{
+          align-self: center;
+
+          width: 12px;
+          height: 12px;
+     }
+     
+     
+
+     /* BOX-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2{
+          width: 240px;
+          height: 35px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 20px;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-2 > button{
+          align-self: center;
+          
+          border-radius: 4px;
+          width: 95px;
+     }
+
+
+
+
+
+
+
+     /* TODO: MESSAGE BOX */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box{
+          position: absolute;
+
+          border: 1px solid black;
+          background-color: rgb(255, 255, 255);
+          width: 400px;
+          height: 300px;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box{
+          align-self: center;
+          
+          width: 350px;
+          height: 250px;
+     }
+
+     /* COL-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1){
+          height: 80%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(1) > span{
+          align-self: center;
+     }
+
+     /* COL-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2){
+          height: 20%;
+
+          gap: 8%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button{
+          align-self: center;
+
+          width: 120px;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2){
+          border: 1px solid rgb(190, 30, 30);
+          background-color: rgb(190, 30, 30);
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Message-Box > .Box > .col:nth-child(2) > button:nth-child(2) > span{
+          color: white;
+     }
+
+} 
+
+
+ /* OPTIMIZE : 500px */
+@media (min-width: 500px){ 
+
+
+     /* TODO: Tablet Navigation */
+     .Workspace > .Workspace-Area > .Tablet-Nav{
+          z-index: 1;
+          position: absolute;
+
+          background-color: rgb(19, 113, 66);
+          width: 250px;
+          height: 100%;
+
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+          
+          animation: SlideRight 1s ease-in-out;
+     }
+     @keyframes SlideRight {
+          from{
+               width: 0px;
+          }
+     }
+
+
+     
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          overflow: hidden;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 0px;
+     }
+
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     /* .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     } */
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Workspace > .Workspace-Area > .Tablet-Nav > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+} 
+
+
+
+ /* OPTIMIZE : 768px */
+@media (min-width: 768px){ 
+
+     .Workspace > .Header > .col:nth-child(1){
+          margin-left: 42px;
+
+          justify-content: start;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          display: flex;
+     }
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-4{
+
+          height: 60vh;
+
+          flex-direction: row;
+     }
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-4 > .Box:nth-child(1){
+          width: 50%;
+     }
+
+     
+     /* CONTENT-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-1{
+          height: 5%;
+
+          display: flex;
+     }
+
+
+
+     /* CONTENT-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2{
+          height: 90%;
+     }
+
+     /* OPTIMIZE: CLASSLIST */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card{
+          width: 65%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users{
+          flex-direction: row;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box{
+          align-self: center;
+
+          width: 100%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box > span{
+          align-self: center;
+     }
+
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(1){
+          width: 30%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(2){
+          width: 30%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(3){
+          width: 50%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(4){
+          width: 40%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 > .Card > .Card-Body > .Inner-Box > .Parent-List-Container-For-Users > .new-list-for-users > .Info-Box:nth-child(5){
+          width: 20%;
+     }
+     
+
+
+
+      /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          width: 75%;
+          height: 70%;
+     }
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form form{
+          flex-direction: row;
+     }
+
+     /* CONTAINER-1 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1){
+          width: 40%;
+          height: 100%;
+     }
+     
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(1) > .File-Box{
+          margin-top: -90px;
+     }
+
+
+
+     /* CONTAINER-2 */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2){
+          width: 60%;
+          height: 100%;
+     }
+          /* BOX-1 */
+          .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form > form > .Container:nth-child(2) > .Box-1{
+               margin-top: 60px;
+          }
+
+
+
+
+} 
+
+
+
+ /* OPTIMIZE : 992px */
+@media (min-width: 992px){ 
+
+     /* TODO: Desktop Navigation */
+     .Desktop-SidePanel{
+          background-color: rgb(19, 113, 66);
+          width: 250px;
+          margin: 0px;
+          padding: 0px;
+
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          animation: SlideRight 1s ease-in-out;  
+     }
+     @keyframes SlideRight {
+          from{
+               width: 0px;
+          }
+     }
+
+
+     .Desktop-SidePanel > .Header{
+          background-color: rgb(19, 113, 66);
+          box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2); 
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: center;
+     }
+     .Desktop-SidePanel > .Header > .Box{
+          align-self: center;
+
+          width: 100%;
+          height: 55px;
+
+          display: flex;
+          justify-content: start;
+          flex-direction: row;
+     }
+     .Desktop-SidePanel > .Header > .Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(19, 113, 66);
+          background-color: rgb(19, 113, 66);
+          margin-left: 42px;
+          width: 32px;
+          height: 32px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+     }
+     .Desktop-SidePanel > .Header > .Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+     .Desktop-SidePanel > .Header > .Box > span{
+          align-self: center;
+
+          margin-left: 24px;
+          color: rgb(255, 255, 255);
+     }
+
+
+
+     .Desktop-SidePanel > .Navigation-Container{
+          align-self: center;
+
+          width: 300px;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          overflow: hidden;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box{
+          margin-top: 24px;
+          width: 100%;
+          height: auto;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+     }
+
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box{
+          width: 100%;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(19, 113, 66);
+          border-radius: 6px;
+          width: 200px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+
+     /* HIGHLIGHT CURRENT TAB */
+     /* .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box:nth-child(1) > button:nth-child(1){
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     } */
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(1) > .Navigation-Box > button:hover{
+          transition: 0.3s ease-in-out;
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+     }
+
+
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button{
+          align-self: center;
+
+          border: 1px solid rgb(20, 159, 90);
+          background-color: rgb(20, 159, 90);
+          border-radius: 6px;
+          width: 164px;
+          height: 50px;
+          padding: 20px;
+
+          display: flex;
+          justify-content: start;
+          gap: 25px;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button > span{
+          align-self: center;
+
+          color: white;
+     }
+     .Desktop-SidePanel > .Navigation-Container > .Box:nth-child(2) > button > img{
+          align-self: center;
+
+          width: 24px;
+          height: 24px;
+     }
+
+    
+
+
+
+     /* TODO: Workspace */
+     .Workspace > .Header > .col:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+          display: none;
+     }
+
+
+     .Workspace > .Header > .col:nth-child(2){
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          margin-left: 34px;
+          width: 300px;
+
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box > span{
+          align-self: center;
+
+          margin-left: 14px;
+          color: rgb(255, 255, 255);
+
+          display: flex;
+     }
+
+
+
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-2{
+          justify-content: start;
+     }
+     .Workspace > .Workspace-Area > .Interactive-Content-Area > .Content-Container-2 > .Card{
+          margin-left: 75px;
+     }
+
+
+
+      /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          width: 70%;
+          height: 70%;
+     }
+} 
+
+
+
+ /* OPTIMIZE : 1300px */
+@media (min-width: 1300px){ 
+     .Desktop-SidePanel{
+          width: 250px;
+
+          display: flex;
+     }
+
+     
+     .Workspace > .Header > .col:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(1){
+          display: none;
+     }
+     .Workspace > .Header > .col:nth-child(1) > button:nth-child(2){
+               display: none;
+     }
+
+     .Workspace > .Header > .col:nth-child(2){
+          justify-content: start;
+     }
+     .Workspace > .Header > .col:nth-child(2) > .Box{
+          margin-left: 34px;
+          width: 300px;
+
+          justify-content: start;
+     }
+
+
+     /* TODO: FORM! */
+     .Workspace > .Workspace-Area > .Workspace-Body .content-2 .Form{
+          width: 50%;
+          height: 70%;
+     }
+}
