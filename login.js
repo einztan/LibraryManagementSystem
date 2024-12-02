@@ -28,7 +28,7 @@ document.getElementById("PasswordVisibilityBTN").addEventListener('click',()=>{
 
 // TODO: Get login details.
 
-function LoggedInAs( User, email, LogState, role ){
+function LoggedInAs( User, email, LogState, role, Profile ){
     // for clearing current logged user
     localStorage.removeItem('Logged');
 
@@ -38,10 +38,11 @@ function LoggedInAs( User, email, LogState, role ){
         Name: User,
         Email: email,
         Log: LogState,
-        Role: role
+        Role: role,
+        Image: Profile
     };
     
-    console.log( "logged in as: " + Account.Name + "\n" + Account.Email + "\n" + Account.Log + "\n" + Account.Role );
+    console.log( "logged in as: " + Account.Name + "\n" + Account.Email + "\n" + Account.Log + "\n" + Account.Role + "\n" + Account.Image );
 
     let GetObject = localStorage.getItem('Logged');
     let ParsedObject = JSON.parse(GetObject) || [];
@@ -51,7 +52,7 @@ function LoggedInAs( User, email, LogState, role ){
 
     console.log( "Item Added to Application." );
 
-    window.location.href="dashboard.html";
+    window.location.href="dashboard.html";   
 }
 
 
@@ -85,9 +86,10 @@ form.addEventListener('submit',(event)=>{
 
         let FullName = ValidPrompt.FirstName + " " + ValidPrompt.LastName;
         let Email = ValidPrompt.Email;
-        let Role = ValidPrompt.Role
+        let Role = ValidPrompt.Role;
+        let Profile = ValidPrompt.Image;
 
-        LoggedInAs( FullName, Email, Logged, Role );
+        LoggedInAs( FullName, Email, Logged, Role, Profile );
 
         return;
     }

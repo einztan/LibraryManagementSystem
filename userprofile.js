@@ -312,142 +312,6 @@ window.addEventListener('resize', ScreenSize);
 
 
 
-// TODO: Count Inventory, Borrwoed, returned functionalities.
-
-function DisplayCount(){
-    console.log("Hello");
-
-
-    // OPTIMIZE: INVENTORY COUNT. 
-    let INVENTORY = [
-        {
-            Title: "Food Delivery Application: Application Based System in Forbes College.",
-            Published: "10/20/2016",
-            Display: "default",
-        },
-        {
-            Title: "Food Delivery Application: Application Based System in Forbes College.",
-            Published: "10/20/2016",
-            Display: "default",
-        },
-        {
-            Title: "Food Delivery Application: Application Based System in Forbes College.",
-            Published: "10/20/2016",
-            Display: "default",
-        },
-    ];
-    let result1 = 1;
-    for( let i=0; i < INVENTORY.length; i++ ){
-        document.getElementById("InventoryCountTXT").innerText= result1 + i;
-    }
-
-
-
-    // OPTIMIZE: BORROWED COUNT. 
-    let BORROWED = [
-        {
-            Name: "Francisco Alvarencho",
-            Course: "BSIT-2",
-            LibID: "00123",
-            DateBorrowed: "11/24/2024",
-            DateOfReturn: "11/25/2024",
-            Returned: false
-        },
-        {
-            Name: "Alberto Juaqim",
-            Course: "BSIT-2",
-            LibID: "00123",
-            DateBorrowed: "11/24/2024",
-            DateOfReturn: "11/25/2024",
-            Returned: false
-        },
-    ];
-    let result2 = 1;
-    for( let i=0; i < BORROWED.length; i++ ){
-        document.getElementById("BorrowedCountTXT").innerText= result2 + i;
-    }
-
-
-
-    // OPTIMIZE: RETURNED COUNT. 
-    let RETURNED = [
-        {
-            Name: "Alberto Juaqim",
-            Course: "BSIT-2",
-            LibID: "00123",
-            DateBorrowed: "11/24/2024",
-            DateOfReturn: "11/25/2024",
-            DateReturned: "11/28/2024",
-            Returned: true,
-        },
-    ];
-    let result3 = 1;
-    for( let i=0; i < RETURNED.length; i++ ){
-        document.getElementById("ReturnedCountTXT").innerText= result3 + i;
-    }
-
-}
-DisplayCount();
-
-
-
-
-// TODO: Display Returning Books. 
-
-function DisplayScheduledReturningBooks(){
-
-    let SCHEDULE = [
-        {
-            Name: "Francisco Alvarencho",
-            Course: "BSIT-2",
-            LibID: "00123",
-            DateBorrowed: "11/24/2024",
-            DateOfReturn: "11/25/2024",
-            Returned: false
-        },
-        {
-            Name: "Alberto Juaqim",
-            Course: "BSIT-2",
-            LibID: "00123",
-            DateBorrowed: "11/24/2024",
-            DateOfReturn: "11/25/2024",
-            Returned: false
-        },
-    ];
-    
-    let ParentContainer = document.getElementById("ParentContainerForSchedule");
-    ParentContainer.innerHTML="";
-
-    if( ParentContainer.innerHTML==="" ){
-
-        SCHEDULE.forEach( schedule => {
-
-            let list = document.createElement('div');
-            list.innerHTML=`
-                <div class="Info-Box"> 
-                    <span> ${ schedule.Name }        </span> 
-                </div>
-                <div class="Info-Box"> 
-                    <span> ${ schedule.Course }      </span> 
-                </div>
-                <div class="Info-Box"> 
-                    <span> ${ schedule.LibID }       </span> 
-                </div>
-                <div class="Info-Box"> 
-                    <span> ${ schedule.DateOfReturn }</span> 
-                </div>
-            `;
-            list.classList.add('new-list-for-schedule');
-            ParentContainer.appendChild( list );
-        });
-    }
-
-}
-DisplayScheduledReturningBooks();
-
-
-
-
 
 // TODO: redirectory buttons.  
 
@@ -517,7 +381,7 @@ document.querySelectorAll('.IDGeneration-btn').forEach( IDGBtn => {
 
 
 // USER MANAGEMENT
-document.getElementById("usermanagementBTN").addEventListener('click',()=>{    
+document.getElementById("usermanagementBTN").addEventListener('click',()=>{
     let ParsedItem = JSON.parse(localStorage.getItem('Logged')) || [];
     let USER = ParsedItem.find( user => user.Role);
 
@@ -532,15 +396,265 @@ document.getElementById("usermanagementBTN").addEventListener('click',()=>{
 });
 
 
+// TODO: change password form.
+function changePassword(getNewPassword)
+{
+    //call localStorage
+    let CURRENT = JSON.parse( localStorage.getItem('Logged') )||[];
+    let NEW = JSON.parse( localStorage.getItem('New-Password') )||[];
+
+    //perform default user image replacement.
+    let DATA = JSON.parse( localStorage.getItem('LIBUsers') )||[];
+    let findData = DATA.find(user => user.Email === CURRENT[0].Email);
+    if(!findData)
+    {
+        console.log("Data not found");
+    }
+    else
+    {
+        console.log("FOUND EMAIL: " + findData.Email + "name: " + findData.FirstName + " " + findData.LastName);
+
+        //replace original data.
+        findData.Pass = NEW[0].Pass;
+        localStorage.setItem('LIBUsers', JSON.stringify(DATA));
+    }
+
+    //clear stored image.
+    localStorage.removeItem('New-Password');
+
+    //reload.
+    window.location.reload();
+
+    //update user.
+    alert("Password has been changed!");
+}
+
+let form_2 = document.getElementById("form_2");
+form_2.addEventListener('submit',(event)=>{
+    event.preventDefault();
+
+    let VERIFY = form_2.Verif.value;
+    let PASS = form_2.pass.value;
+    let CPASS = form_2.cpass.value;
+
+    if( VERIFY === "" )
+    {
+        alert("Please verify this account.");
+        return;
+    }
+    if( PASS.length < 8 )
+    {
+        alert("Password must atleast contain 8-12 characters.");
+        return;
+    }
+    if( CPASS !== PASS )
+    {
+        alert("Password invalid");
+        return;
+    }
+
+    if((VERIFY !== "") && (CPASS === PASS))
+    {
+        let Password ={
+            Pass : CPASS
+        };
+
+        //create localStorage
+        let GetObject = localStorage.getItem('New-Password');
+        let ParsedObject = JSON.parse(GetObject) || [];
+        ParsedObject.push(Password);
+        localStorage.setItem('New-Password', JSON.stringify(ParsedObject) ) || [];
+        
+        changePassword(CPASS);
+    }
+});
+
+// OPTIMIZE: Generate verification. 
+let Click_4 = 0;
+function GenerateVerificationCode(){
+    let Count = Click_4 += 1;
+   
+    let Alphabet   = ['A', 'b', 'c'];
+    let Numerals   = [ 102, 120, 101 ];
+    let Randomizer = [ "Xkl", "kYk", "oMn" ];
+
+    let R1 = Math.floor( Math.random() * 3 ); 
+    let R2 = Math.floor( Math.random() * 3 ); 
+    let R3 = Math.floor( Math.random() * 3 ); 
+
+    if( Count == 1 ){
+        Count = Click_4 = 0;
+
+        let VerifBTN = document.getElementById("SendVerificationBTN");
+
+        VerifBTN.disabled=true;
+
+        let AuthenthicatedCode =  Alphabet[R1] + Numerals[R2] + Randomizer[R3];
+        let Verify = document.getElementById("VerifInput");
+        Verify.value = AuthenthicatedCode;
+
+        console.log(AuthenthicatedCode);
+    }  
+}
+let Verify = document.getElementById("SendVerificationBTN")
+Verify.addEventListener('click',()=>{ GenerateVerificationCode(); });
+
+// OPTIMIZE: Password Visibility function. 
+let Click_5 = 0;
+function TogglePassVisibility(){
+    let Count = Click_5 += 1;
+
+    let DefaultState = "Assets/eyeDefaultIconBlack.png";
+    let ClickedState = "Assets/eyeToggledIconBlack.png";
+
+    if( Count == 1 ){
+        document.getElementById("PassDefaulIcon").src=ClickedState;
+        document.getElementById("PassINPUT").type='text';
+    }
+    if( Count == 2 ){
+        Count = Click_5 = 0;
+
+        document.getElementById("PassDefaulIcon").src=DefaultState;
+        document.getElementById("PassINPUT").type='password';
+    }
+
+}
+document.getElementById("PassVisibilityBTN").addEventListener('click',()=>{
+    TogglePassVisibility();
+});
+
+let Click_6 = 0;
+function ToggleCPassVisibility(){
+    let Count = Click_6 += 1;
+
+    let DefaultState = "Assets/eyeDefaultIconBlack.png";
+    let ClickedState = "Assets/eyeToggledIconBlack.png";
+
+    if( Count == 1 ){
+        document.getElementById("CPassDefaulIcon").src=ClickedState;
+        document.getElementById("CPassINPUT").type='text';
+    }
+    if( Count == 2 ){
+        Count = Click_6 = 0;
+
+        document.getElementById("CPassDefaulIcon").src=DefaultState;
+        document.getElementById("CPassINPUT").type='password';
+    }
+
+}
+document.getElementById("CPassVisibilityBTN").addEventListener('click',()=>{
+    ToggleCPassVisibility();
+});
 
 
+// OPTIMIZE: open form 2. (for change password.)
+document.getElementById("changePassBtn").addEventListener('click',()=>{
+    document.getElementById("FORM_2").style.display="flex";
+    document.getElementById("PROFILE_CONTAINER").style.opacity="0%";
+});
+// OPTIMIZE: CLOSE FORM 1.
+document.getElementById("CloseFormBTN_2").addEventListener('click',()=>{
+    document.getElementById("FORM_2").style.display="none";
+    document.getElementById("PROFILE_CONTAINER").style.opacity="100%";
+    document.querySelector('input[type="file"]').value=""; 
+});
+
+
+// TODO: change image form.
+function getIMAGE()
+{
+    //call localStorage
+    let CURRENT = JSON.parse( localStorage.getItem('Logged') )||[];
+    let NEW = JSON.parse( localStorage.getItem('New-Image') )||[];
+
+    //reassign new value to current value.
+    CURRENT[0].Image = NEW[0].Image;
+    localStorage.setItem('Logged', JSON.stringify(CURRENT));
+    console.log("image changed");
+
+    //perform default user image replacement.
+    let DATA = JSON.parse( localStorage.getItem('LIBUsers') )||[];
+    let findData = DATA.find(user => user.Email === CURRENT[0].Email);
+    if(!findData)
+    {
+        console.log("Data not found");
+    }
+    else
+    {
+        console.log("FOUND EMAIL: " + findData.Email + "name: " + findData.FirstName + " " + findData.LastName);
+
+        //replace original data.
+        findData.Image = NEW[0].Image;
+        localStorage.setItem('LIBUsers', JSON.stringify(DATA));
+    }
+
+    //clear stored image.
+    localStorage.removeItem('New-Image');
+
+    //reload.
+    window.location.reload();
+
+    //update user.
+    alert("Profile Picture has been updated!");
+}
+
+let form_1 = document.getElementById("form_1");
+form_1.addEventListener('submit',(event)=>{
+    event.preventDefault();
+
+    let reader = new FileReader(); 
+    reader.onload = function(e){ 
+        let Profile = {
+            Image : e.target.result
+        };
+        //create localStorage
+        let GetObject = localStorage.getItem('New-Image');
+        let ParsedObject = JSON.parse(GetObject) || [];
+        ParsedObject.push(Profile);
+        localStorage.setItem('New-Image', JSON.stringify(ParsedObject) ) || [];
+        
+        getIMAGE();
+    } 
+    let fileInput = form_1.querySelector('input[type="file"]'); 
+    if( fileInput.files.length > 0 ){ 
+       reader.readAsDataURL(fileInput.files[0]); 
+    }
+    else{
+        alert("Please add an image.");
+    }
+});
+//OPTIMIZE: open form 1. (for change image.)
+document.getElementById("ChangeImgBTN").addEventListener('click', ()=>{
+    document.getElementById("FORM_1").style.display="flex";
+    document.getElementById("PROFILE_CONTAINER").style.opacity="0%";
+});
+// OPTIMIZE: CLOSE FORM 1.
+document.getElementById("CloseFormBTN_1").addEventListener('click',()=>{
+    document.getElementById("FORM_1").style.display="none";
+    document.getElementById("PROFILE_CONTAINER").style.opacity="100%";
+    document.querySelector('input[type="file"]').value=""; 
+});
+
+
+// TODO: Display user profile
+document.addEventListener('DOMContentLoaded',()=>{
+
+    //TODO: Display Profile image.
+    let PROFILE = document.getElementById("DisplayUserPROFILE");
+    let LoggedUser = JSON.parse( localStorage.getItem('Logged') ) || [];
+    let user = LoggedUser.find(user => user.Image);
+    PROFILE.src=user.Image;
+
+    document.getElementById("DisplayNAME").innerText=user.Name;
+    document.getElementById("DisplayEMAIL").innerText=user.Email;
+    document.getElementById("DisplayROLE").innerText=user.Role;
+});
 
 
 // TODO: Display current logged user.
 function LoggedInAs(){
     
     let LoggedUser = JSON.parse( localStorage.getItem('Logged') ) || [];
-
     let findUser = LoggedUser.find(user => user.Email);
 
     console.log("logged as: \n" + findUser.Email);

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/ForbesLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="CustomClassProperties.css">
+    <link rel='stylesheet' href='userprofile.css'> 
+    <title>Forbes College Library</title>
+
+</head>
+<body>
+
+        <div class="container-fluid">
+                <div class="row">
+
+                    <!-- TODO: Desktop Navigation  -->
+                    <div class="col-auto Desktop-SidePanel" id="DesktopSidePanel">
+
+                                <div class="Header">
+                                        <div class="Box">
+                                                <button type="button" id="DesktopNavigationBTN"> <img src="Assets/hamburgerIconWhite.png" alt="..."> </button> <span class="Desktop-Navigation-Text"> ADMIN PANEL </span>  
+                                        </div>
+                                </div>
+
+                                <div class="Navigation-Container">
+                                        <div class="Box">
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   Dashboard-btn"> <img src="Assets/dashboardIconWhite.png" alt="..."     class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Dashboard         </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   Inventory-btn"> <img src="Assets/inventoryIconWhite.png" alt="..."     class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Inventory         </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   Borrowed-btn" > <img src="Assets/bookIconWhite.png" alt="..."          class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Borrowed          </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   Returned-btn"> <img src="Assets/bookIconWhite.png" alt="..."          class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Returned          </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   ThesisANDCapstone-btn"> <img src="Assets/thesisrecordsIconWhite.png" alt="..." class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Thesis & Captsone </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   LostBooks-btn"> <img src="Assets/lostBookIconWhite.png" alt="..."      class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> Lost Books        </span>  </button> </div>
+                                                <div class="Navigation-Box"> <button type="button" class="Desktop-Navigation-Btn   IDGeneration-btn"> <img src="Assets/idIconWhite.png" alt="..."            class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> ID Generation     </span>  </button> </div>
+                                        </div>
+                                        <div class="Box">
+                                                <button type="button" class="Desktop-Navigation-Btn LogoutBTN"> <img src="Assets/logoutIconWhite.png" alt="..." class="Desktop-Navigation-Image"> <span class="Desktop-Navigation-Text"> LOGOUT </span> </button>
+                                        </div>
+                                </div> 
+
+                    </div>
+
+
+
+
+<!-- OPTIMIZE: WORKSPACE -->
+<div class="col Workspace">
+
+        <!-- OPTIMIZE: Header -->
+        <div class="col-auto Header"> 
+                                
+                <div class="col align-self-center h-100"> 
+                    <button type="button" id="MobileNavigationBTN"> <img src="Assets/hamburgerIconWhite.png" alt="..."> </button>
+                    <button type="button" id="TabletNavigationBTN"> <img src="Assets/hamburgerIconWhite.png" alt="..."> </button>
+                </div>
+                <div class="col align-self-center h-100"> 
+                        <div class="Box">
+                                <img src="Assets/ForbesLogo.png" alt="...">
+                                <span> FORBES COLLEGE LIBRARY </span>
+                        </div>
+                </div>
+                <div class="col align-self-center h-100"> 
+                        <div class="Box  d-flex justify-content-end flex-column">
+                                    <span id="FullNameTEXT"> </span>
+                                    <span id="RoleTEXT"> </span>
+                        </div>
+                        <div class="Box  d-flex justify-content-center"> <button type="button" id="usermanagementBTN"> <img src="/Assets/userIconWhite.png" alt="..."> </button> </div>
+                </div>
+        </div>
+
+
+
+
+<!-- OPTIMIZE:  Workspace area -->
+<div class="col Workspace-Area"> 
+                                
+                                        
+<!-- TODO: Mobile Navigation -->
+<div class="col w-100 Mobile-Nav" id="MobileNavigationContainer">
+        <div class="Navigation-Container">
+                <div class="Box">
+                                <div class="Navigation-Box"> <button type="button" class="Dashboard-btn"> <img src="Assets/dashboardIconWhite.png" alt="...">     <span> Dashboard         </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="Inventory-btn"> <img src="Assets/inventoryIconWhite.png" alt="...">     <span> Inventory         </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="Borrowed-btn"> <img src="Assets/bookIconWhite.png" alt="...">          <span> Borrowed          </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="Returned-btn"> <img src="Assets/bookIconWhite.png" alt="...">          <span> Returned          </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="ThesisANDCapstone-btn"> <img src="Assets/thesisrecordsIconWhite.png" alt="..."> <span> Thesis & Captsone </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="LostBooks-btn"> <img src="Assets/lostBookIconWhite.png" alt="...">      <span> Lost Books        </span>  </button> </div>
+                                <div class="Navigation-Box"> <button type="button" class="IDGeneration-btn"> <img src="Assets/idIconWhite.png" alt="...">            <span> ID Generation     </span>  </button> </div>
+                </div>
+                <div class="Box">
+                        <button type="button" class="LogoutBTN"> <img src="Assets/logoutIconWhite.png" alt="..."> <span> LOGOUT </span> </button>
+                </div>
+        </div>  
+</div>
+
+
+<!-- TODO: Tablet Navigation -->
+<div class="col-auto Tablet-Nav" id="TabletNavigationContainer">
+        <div class="Navigation-Container">
+                <div class="Box">
+                        <div class="Navigation-Box"> <button type="button" class="Dashboard-btn"> <img src="Assets/dashboardIconWhite.png" alt="...">     <span> Dashboard         </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="Inventory-btn"> <img src="Assets/inventoryIconWhite.png" alt="...">     <span> Inventory         </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="Borrowed-btn"> <img src="Assets/bookIconWhite.png" alt="...">          <span> Borrowed          </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="Returned-btn"> <img src="Assets/bookIconWhite.png" alt="...">          <span> Returned          </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="ThesisANDCapstone-btn"> <img src="Assets/thesisrecordsIconWhite.png" alt="..."> <span> Thesis & Captsone </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="LostBooks-btn"> <img src="Assets/lostBookIconWhite.png" alt="...">      <span> Lost Books        </span>  </button> </div>
+                        <div class="Navigation-Box"> <button type="button" class="IDGeneration-btn"> <img src="Assets/idIconWhite.png" alt="...">            <span> ID Generation     </span>  </button> </div>
+                </div>
+                <div class="Box">
+                        <button type="button" class="LogoutBTN"> <img src="Assets/logoutIconWhite.png" alt="..."> <span> LOGOUT </span> </button>
+                </div>
+        </div>
+</div>
+
+
+
+
+                                <!-- TODO: CONTENT  -->
+
+<!-- OPTIMIZE: Workspace Body -->
+<div class="col h-100 Workspace-Body">
+        <div class="col h-100 Inner-Box">
+
+
+                                <div class="col content-1" id="CONTENT_1_CONTAINER"> </div>
+                                <div class="col content-2" id="CONTENT_2_CONTAINER"> 
+
+                                        <!-- TODO: CARD -->
+                                        <div class="Card">
+                                                <div class="Overlay-Box">
+                                                        <div class="Box-1"></div>
+                                                        <div class="Box-2">
+                                                                <div class="box-1">
+                                                                    <div class="box-2">
+                                                                        <div class="box-3"></div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="Box-3">
+                                                            <div class="box-1">
+                                                                <div class="box-2">
+                                                                    <div class="box-3"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Box-4"></div>
+
+                                                        <div class="CONTAINER" id="PROFILE_CONTAINER">
+                                                                <div class="box">
+                                                                    <div class="Detail-Box Detail-Box-1">
+                                                                            <div class="Profile-Box">
+                                                                                    <div class="img-Box">
+                                                                                        <img src="Assets/modelIMG.jpg" id="DisplayUserPROFILE">
+                                                                                    </div>
+                                                                                    <button type="button" id="ChangeImgBTN"> <img src="Assets/editIconWhite.png"> </button>
+                                                                            </div>
+                                                                    </div>
+                                                                    <div class="Detail-Box Detail-Box-2">
+                                                                                <div class="new-information-for-user">
+                                                                                        <div class="Info-Box">
+                                                                                                <span id="DisplayNAME"> <b> NAME </b> </span>
+                                                                                        </div>
+                                                                                        <div class="Info-Box">
+                                                                                                <span id="DisplayEMAIL"> EMAIL </span>
+                                                                                        </div>
+                                                                                        <div class="Info-Box">
+                                                                                                <span id="DisplayROLE"> ROLE </span>
+                                                                                        </div>
+                                                                                        <div class="Info-Box">
+                                                                                                <span> change password </span>
+                                                                                                <button type="button" id="changePassBtn"> <img src="Assets/editIconWhite.png"> </button>
+                                                                                        </div>
+                                                                                </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+
+                                                        
+                                                        <!-- TODO: CHANGE IMAGE FORM -->
+                                                        <div class="Change-Image-Form" id="FORM_1">
+                                                                <form class="align-self-center d-flex justify-content-center flex-column" id="form_1">
+                                                                                <div class="col-auto col-1 d-flex justify-content-center flex-column">
+                                                                                        <div class="align-self-center Image-Box d-flex justify-content-center flex-column">
+                                                                                                <div class="IMG"><img src="Assets/modelIMG.jpg"></div>
+                                                                                                <div class="Icon-Box d-flex justify-content-start flex-row"> 
+                                                                                                        <div class="Icon d-flex justify-content-center flex-row"> 
+                                                                                                                <div class="Icon-Background d-flex justify-content-center"> <img src="Assets/editImgIconWhite.png"> </div>
+                                                                                                        </div> 
+                                                                                                        <input type="file">
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-auto col-2 d-flex justify-content-center flex-column">
+                                                                                        <button type="submit" class="btn-submit"> <span> Change Photo </span> </button>
+                                                                                        <button type="reset" class="btn-cancel" id="CloseFormBTN_1"> <span> close </span> </button>
+                                                                                </div>
+                                                                </form>
+                                                        </div>
+
+                                                        <!-- TODO: CHANGE PASSWORD FORM -->
+                                                         <div class="Change-Password-Form" id="FORM_2">
+                                                                <form class="align-self-center" id="form_2">
+                                                                        <div class="col-auto col-1 d-flex justify-content-center flex-column">
+                                                                                <div class="CONTAINER d-flex justify-content-center flex-column">
+                                                                                        <div class="Input-Boxes d-flex justify-content-center flex-column">
+                                                                                                <label for=""><b>SEND VERIFICATION</b></label>
+                                                                                                <div class="Verification-Box">
+                                                                                                        <input type="text" name="Verif" id="VerifInput" disabled>
+                                                                                                        <button type="button" id="SendVerificationBTN"> <img src="Assets/sendIconWhite.png"> </button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="Input-Boxes d-flex justify-content-center flex-column">
+                                                                                                <label for=""><b>NEW PASSWORD</b></label>
+                                                                                                <div class="Password-Box">
+                                                                                                        <input type="password" name="pass" id="PassINPUT" min="8" maxlength="12">
+                                                                                                        <button type="button" id="PassVisibilityBTN"> <img src="Assets/eyeDefaultIconBlack.png" id="PassDefaulIcon"> </button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="Input-Boxes d-flex justify-content-center flex-column">
+                                                                                                <label for=""><b>CONFIRM PASSWORD</b></label>
+                                                                                                <div class="Password-Box">
+                                                                                                        <input type="password" name="cpass" id="CPassINPUT">
+                                                                                                        <button type="button" id="CPassVisibilityBTN"> <img src="Assets/eyeDefaultIconBlack.png" id="CPassDefaulIcon"> </button>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-auto col-2 d-flex justify-content-center flex-column">
+                                                                                <button type="submit" class="btn-submit"> <span> Change Password </span> </button>
+                                                                                <button type="reset" class="btn-cancel" id="CloseFormBTN_2"> <span> close </span> </button>
+                                                                        </div>
+                                                                </form>
+                                                         </div>
+
+                                                </div>
+                                        </div>
+
+                                </div>
+
+
+        </div>
+</div>
+
+
+
+                        </div>
+                </div>
+        </div>
+</div>
+
+        <script src='userprofile.js' defer type='text/Javascript'></script>
+</body>
+</html>

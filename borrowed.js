@@ -523,6 +523,9 @@ form.addEventListener('submit',(event)=>{
         let Course    = form.Course.value;
         let Year      = form.Year.value;
         let LibraryID = form.LibIDNo.value;
+
+        let ParsedItem = JSON.parse(localStorage.getItem('Borrowed')) || [];
+        let IDexists = ParsedItem.find( Student => Student.LibID === LibraryID);
         
         if((FirstName === "") || (LastName === "")){
             alert("Name is required.");
@@ -536,9 +539,14 @@ form.addEventListener('submit',(event)=>{
             alert("Library ID No is required.");
             return;
         }
+        if(IDexists){
+            alert("Library ID already exists!.");
+            Count = Click_4 -= 1;
+            return;
+        }
 
   
-        if((FirstName !== "") && (LastName !== "") && (Course !== "") && (Year !== "")){
+        if((FirstName !== "") && (LastName !== "") && (Course !== "") && (Year !== "") && (!IDexists)){
             document.getElementById("Step_2_FORM").style.display="none";
             document.getElementById("Step_3_FORM").style.display="flex";
 
@@ -669,7 +677,17 @@ document.querySelectorAll('.IDGeneration-btn').forEach( IDGBtn => {
 
 // USER MANAGEMENT
 document.getElementById("usermanagementBTN").addEventListener('click',()=>{
-    window.location.href="usermanagement.html";
+    let ParsedItem = JSON.parse(localStorage.getItem('Logged')) || [];
+    let USER = ParsedItem.find( user => user.Role);
+
+    if(USER.Role === "Admin")
+    {
+        window.location.href="usermanagement.html";
+    }
+    else
+    {
+        window.location.href="userprofile.html";
+    }
 });
 
 

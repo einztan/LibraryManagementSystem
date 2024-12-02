@@ -467,13 +467,39 @@ function DisplayAllUsers(){
                     </span>
                 </div>
                 <div class="Info-Box">
-                        <button type="button" class="Remove-btn" data-index="${index}"> <img src="Assets/trashIconWhite.png" alt="..."> </button>
+                        <button type="button" class="removeBTN" data-index="${index}"> <img src="Assets/trashIconWhite.png" alt="..."> </button>
                 </div>
             `;
             list.classList.add('new-list-for-users');
             ParentListContainerForUsers.append( list );
         }
     });
+
+    //remove object and item from localStorage.
+    let removeBTN = document.querySelectorAll('.removeBTN');
+    removeBTN.forEach(buttons => {
+    buttons.addEventListener('click',()=>{
+            //get specific index.
+            let index = event.target.getAttribute('data-index');
+            index = parseInt(index);
+            
+            //get name or check name of removed item.
+            let clickedName = user[index].FirstName;
+            console.log('Clicked index:' + index + ' NAME: ' + clickedName);
+            
+            //remove item from localStorage.
+            user.splice(index, 1);
+            
+            // Update localStorage.
+            localStorage.setItem('LIBUsers', JSON.stringify(user));
+        
+            //remove object from HTML.
+            let listItem = event.target.closest('.new-list-for-users');
+            ParentListContainerForUsers.removeChild(listItem);
+        });
+    });
+    
+    
 }
 DisplayAllUsers();
 
@@ -495,10 +521,12 @@ function ResetForm(){
             inputs.value="";
         });
 
+        
         let VerifBTN = document.getElementById("SendVerificationBTN");
-        VerifBTN.disabled='false';
+        VerifBTN.disabled=false;
         VerifBTN.style.border="1px solid rgb(20, 159, 90)";
         VerifBTN.style.backgroundColor="rgb(20, 159, 90)";
+
 
         return;
     }  
@@ -512,7 +540,6 @@ let Click_4 = 0;
 function GenerateVerificationCode(){
     let Count = Click_4 += 1;
    
-    
     let Alphabet   = ['A', 'b', 'c'];
     let Numerals   = [ 102, 120, 101 ];
     let Randomizer = [ "Xkl", "kYk", "oMn" ];
@@ -526,7 +553,7 @@ function GenerateVerificationCode(){
 
         let VerifBTN = document.getElementById("SendVerificationBTN");
 
-        VerifBTN.disabled='true';
+        VerifBTN.disabled=true;
         VerifBTN.style.border="1px solid grey";
         VerifBTN.style.backgroundColor="grey";
 
@@ -535,12 +562,10 @@ function GenerateVerificationCode(){
         Verify.value = AuthenthicatedCode;
 
         console.log(AuthenthicatedCode);
-    }
-    
-    
+    }  
 }
 let Verify = document.getElementById("SendVerificationBTN")
-    Verify.addEventListener('click',()=>{ GenerateVerificationCode(); });
+Verify.addEventListener('click',()=>{ GenerateVerificationCode(); });
 
 
 // OPTIMIZE: form submission. 
